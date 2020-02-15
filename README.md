@@ -24,7 +24,3 @@ For using please write in terminal command:
 ## Author
 
 - [Eugen Morozov](https://eugenmorozov.de)
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
