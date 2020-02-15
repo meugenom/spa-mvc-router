@@ -2,7 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-This application was written on plain JavaScript ES6. We use simple router and mvc pattern, bootstrap css.
+This application was written on plain JavaScript ES6. We use simple router, MVC pattern, bootstrap css.
+
 For example component PostShow has 3 files 
 in "/src/components/postShow/"
 - index.js - our **Controller**
@@ -17,7 +18,7 @@ For API Calls was used RESTFul interface from [mockapi.io](https://www.mockapi.i
 
 ## How run this application
 
-We use a node live-server. For using please write in terminal command:
+For using please write in terminal command:
 `npm run server` 
 
 ## Author
