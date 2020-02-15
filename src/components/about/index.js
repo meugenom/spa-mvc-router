@@ -26,7 +26,7 @@ class About {
                         <a href="mailto:first.last@example.com">first.last@example.com</a>
                     </address>
                 </div>
-                <a href="/#/" class="btn btn-link">Back to Home</a>
+                <a href="#/" class="btn btn-link">Back to Home</a>
             </section>
         `
         return view
