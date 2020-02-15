@@ -9,7 +9,7 @@ in "/src/components/postShow/"
 - model.js  - **Model**
 - view.js - **View**
 
-### [View the demo](https://eugenemdev.github.io/spa-mvc-router)
+### [View the demo](https://eugenemdev.github.io/spa-mvc-router/)
 
 ### API
 
