@@ -1,12 +1,10 @@
-import Service from '../../services/Servises.js';
-
+'use strict'
 /**
  * Model for component Navbar
  * @returns nothing
  */
 
-class Model{
-    constructor(){ }
+class Model {
 }
 
-export default Model;
+export default Model

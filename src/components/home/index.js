@@ -1,31 +1,29 @@
-'use strict';
-import Model from './model.js';
-import View from './view.js';
-
+'use strict'
 /**
  * controller Home
  * @param model
  * @param view
- * 
  * @return posts
  */
 
+import Model from './model.js'
+import View from './view.js'
+
 class Home {
-    constructor(){
-        this.model = new Model();
-        this.view = new View();        
-        this.posts = {};         
-    }
-            
-    async render(){        
-        this.posts = await this.model.setPosts();                
-        let section =  await this.view.appendPosts(this.posts);
-        return section                        
-    }
+  constructor () {
+    this.model = new Model()
+    this.view = new View()
+    this.posts = {}
+  }
 
-    after_render(){
-    }
+  async render () {
+    this.posts = await this.model.setPosts()
+    const section = await this.view.appendPosts(this.posts)
+    return section
+  }
 
+  afterRender () {
+  }
 }
 
-export default Home;
+export default Home

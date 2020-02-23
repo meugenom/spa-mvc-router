@@ -5,13 +5,9 @@
  * @returns html to view page About
  */
 
-
 class About {
-    constructor(){        
-    }
-
-    async render(){
-        let view =  /*html*/`
+  async render () {
+    const view = /* html */`
             <section class="section">
                 <h1> About </h1>
                 <div class="bd-example">
@@ -29,13 +25,11 @@ class About {
                 <a href="#/" class="btn btn-link">Back to Home</a>
             </section>
         `
-        return view
-    }
+    return view
+  }
 
-    after_render(){        
-    }
-    
-
+  afterRender () {
+  }
 }
 
-export default About;
+export default About

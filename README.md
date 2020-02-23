@@ -18,8 +18,14 @@ For API Calls was used RESTFul interface from [mockapi.io](https://www.mockapi.i
 
 ## How run this application
 
-For using please write in terminal command:
-`npm run server` 
+1. Install:
+`git clone https://github.com/eugenemdev/spa-mvc-router.git`
+2. Change dir
+`cd spa-mvc-router`
+3. Build pages
+`npm run build`
+4. For using please write in terminal command:
+`npm run start` 
 
 ## Author
 

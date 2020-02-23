@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /**
  * View for component Navbar
@@ -6,11 +6,8 @@
  */
 
 class View {
-    constructor(){           
-    }   
-
-    appendBar(){        
-        let view =  /*html*/`
+  appendBar () {
+    const view = /* html */`
             <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">SPA JS</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,8 +39,8 @@ class View {
                 </div>
             </nav>            
         `
-        return view
-    }
+    return view
+  }
 }
 
-export default View;
+export default View
