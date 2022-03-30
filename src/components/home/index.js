@@ -3,7 +3,7 @@
  * controller Home
  * @param model
  * @param view
- * @return posts
+ * @return users
  */
 
 import Model from './model.js'
@@ -13,12 +13,12 @@ class Home {
   constructor () {
     this.model = new Model()
     this.view = new View()
-    this.posts = {}
+    this.users = {}
   }
 
   async render () {
-    this.posts = await this.model.setPosts()
-    const section = await this.view.appendPosts(this.posts)
+    this.users = await this.model.setUsers()
+    const section = await this.view.appendUsers(this.users)
     return section
   }
 

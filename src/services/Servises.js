@@ -3,17 +3,17 @@ class Service {
     this.options = { method: 'GET', headers: { 'Content-Type': 'application/json' } }
   }
 
-  async getListPosts () {
+  async getUsers () {
     try {
-      const response = await fetch('https://5e470be6fd1af600145de975.mockapi.io/api/v1/posts', this.options)
+      const response = await fetch('https://62446a733da3ac772b0f8517.mockapi.io/api/v1/users', this.options)
       const json = await response.json()
       return json
     } catch (err) {
-      console.log('Error getting documents', err)
+      console.log('Error getting list of users', err)
     }
   }
 
-  async getPost (id) {
+  async getUser (id) {
     const options = {
       method: 'GET',
       headers: {
@@ -21,12 +21,12 @@ class Service {
       }
     }
     try {
-      const response = await fetch('https://5e470be6fd1af600145de975.mockapi.io/api/v1/posts/' + id, options)
+      const response = await fetch('https://62446a733da3ac772b0f8517.mockapi.io/api/v1/users/' + id, this.options)
       const json = await response.json()
       // console.log(json)
       return json
     } catch (err) {
-      console.log('Error getting documents', err)
+      console.log('Error getting user info', err)
     }
   }
 }

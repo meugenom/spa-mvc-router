@@ -1,18 +1,11 @@
-
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const isDevelopment = process.env.NODE_ENV === 'development';
-
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: [ 
-            'babel-polyfill', 
-            './src/app.js'
-          ],
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+	entry: ['babel-polyfill', './src/app.js'],
+  	output: {
+		path: path.resolve(__dirname, 'dist'),
+		filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -22,7 +15,7 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      }           
+      }
     ]
   },
   resolve: {
@@ -34,9 +27,9 @@ module.exports = {
       template: './src/index.html',
       inject: true,
       minify: {
-          removeComments: true,
-          collapseWhitespace: false
+		removeComments: true,
+		collapseWhitespace: false
       }
     })
   ]
-};
+}

@@ -1,5 +1,5 @@
 import Home from './../components/home/index.js'
-import PostShow from './../components/postShow/index.js'
+import User from './../components/user/index.js'
 import Bottombar from './../components/bottombar/index.js'
 import Navbar from './../components/navbar/index.js'
 import About from './../components/about/index.js'
@@ -13,7 +13,7 @@ class Router {
     this.routes = {
       '/': new Home(),
       '/about': new About(),
-      '/p/:id': new PostShow(),
+      '/user/:id': new User(),
       '/register': new Register()
     }
 

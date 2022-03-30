@@ -6,11 +6,12 @@ This application was written on plain JavaScript ES6. We use simple router, MVC 
 
 For example component PostShow has 3 files 
 in "/src/components/postShow/"
-- index.js - our **Controller**
+- index.js - **Controller**
 - model.js  - **Model**
 - view.js - **View**
 
-### [View the demo](https://eugenemdev.github.io/spa-mvc-router/)
+### [View the demo](https://meugenom.github.io/spa-mvc-router/)
+### Using node v16.14.2 (npm v8.5.0)
 
 ### API
 
@@ -29,4 +30,4 @@ For API Calls was used RESTFul interface from [mockapi.io](https://www.mockapi.i
 
 ## Author
 
-- [Eugen Morozov](https://eugenmorozov.de)
+- [Eugen](https://meugenom.com)

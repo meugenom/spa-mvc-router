@@ -8,16 +8,16 @@ import View from './view.js'
  * @return block of html text for some post
  */
 
-class PostShow {
+class User {
   constructor () {
     this.model = new Model()
     this.view = new View()
-    this.post = {}
+    this.user = {}
   }
 
   async render () {
-    this.post = await this.model.setPost()
-    const section = await this.view.appendPost(this.post)
+    this.user = await this.model.setUser()
+    const section = await this.view.appendUser(this.user)
     return section
   }
 
@@ -26,4 +26,4 @@ class PostShow {
   }
 }
 
-export default PostShow
+export default User

@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eugenemdev/spa-mvc-router.git"
+    "url": "git+https://github.com/meugenom/spa-mvc-router.git"
   },
   "keywords": [
     "spa",
@@ -49,7 +49,7 @@
     "services": "0.0.3"
   },
   "bugs": {
-    "url": "https://github.com/eugenemdev/spa-mvc-router/issues"
+    "url": "https://github.com/meugenom/spa-mvc-router/issues"
   },
-  "homepage": "https://github.com/eugenemdev/spa-mvc-router#readme"
+  "homepage": "https://github.com/meugenom/spa-mvc-router#readme"
 }
