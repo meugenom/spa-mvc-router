@@ -8,16 +8,18 @@ class View {
   constructor () {
     this.document = document
     this.section = this.createElement('section', 'section')
-    this.name = this.createElement('h1', 'post_name')
+    this.name = this.createElement('h1', 'user_name')
     this.section.append(this.name)
-    this.description = this.createElement('p', 'post_description')
+    this.area = this.createElement('p', 'user_area')
+    this.section.append(this.area)
+    this.description = this.createElement('p', 'user_description')
     this.section.append(this.description)
 
-    this.avatar = this.createElement('img', 'post_avatar')
-    this.avatar.className = 'img-fluid  img-thumbnail'
-    this.section.append(this.avatar)
+    this.image = this.createElement('img', 'user_image')
+    this.image.className = 'img-fluid  img-thumbnail'
+    this.section.append(this.image)
 
-    this.post = {}
+    this.user = {}
   }
 
   createElement (tag, attribute) {
@@ -41,11 +43,12 @@ class View {
     element.src = url
   }
 
-  appendPost (post) {
-    console.log(post)
-    this.setElement('post_name', post.name)
-    this.setElement('post_description', post.description)
-    this.setImage('post_avatar', post.avatar)
+  appendUser (user) {
+    console.log(user)
+    this.setElement('user_name', user.name)
+    this.setElement('user_description', user.description)
+    this.setElement('user_area', user.area)
+    this.setImage('user_image', user.image)
     return this.section.outerHTML
   }
 }

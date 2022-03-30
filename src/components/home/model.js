@@ -8,12 +8,12 @@ import Service from '../../services/Servises.js'
 
 class Model {
   constructor () {
-    this.posts = {}
+    this.users = {}
   }
 
-  async setPosts () {
-    this.posts = await new Service().getListPosts()
-    return this.posts
+  async setUsers () {
+    this.users = await new Service().getUsers()
+    return this.users
   }
 }
 

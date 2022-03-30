@@ -7,13 +7,13 @@
  */
 
 class View {
-  appendPosts (posts) {
+  appendUsers (users) {
     const view = /* html */`
             <section class="section">
                 <h1> Home </h1>
                 <ul>
-                    ${posts.map(post =>
-                        /* html */`<li><a href="#/p/${post.id}">${post.name}</a></li>`
+                    ${users.map(user =>
+                        /* html */`<li><a href="#/user/${user.id}">${user.name}</a></li>`
                         ).join('\n ')
                     }
                 </ul>

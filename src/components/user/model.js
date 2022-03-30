@@ -3,13 +3,13 @@ import Service from '../../services/Servises.js'
 
 class Model {
   constructor () {
-    this.post = {}
+    this.user = {}
   }
 
-  async setPost () {
+  async setUser () {
     const request = new Utils().parseRequestURL()
-    this.post = await new Service().getPost(request.id)
-    return this.post
+    this.user = await new Service().getUser(request.id)
+    return this.user
   }
 }
 
