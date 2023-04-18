@@ -2,17 +2,17 @@
 
 This is a Single Page Application written in JavaScript ES6, using a simple router and the MVC pattern, and styled with Bootstrap CSS.
 
-### Each component has three files:
+### Each component has three files
 
 - index.js which acts as the `Controller`
 - model.js which contains the `Model`
 - view.js which holds the `View`
 
-For example, the component PostShow has these files located in the `/src/components/postShow/` folder.
+For example, the component `Home` has these files located in the `/src/components/home/` folder.
 
 You can view a demo of the application at [Demo](https://meugenom.github.io/spa-mvc-router/)
 
-### To run this application:
+### To run this application
 
 1. Clone the repository with the command `git clone https://github.com/meugenom/spa-mvc-router.git`
 2. Change to the directory with `cd spa-mvc-router`.
