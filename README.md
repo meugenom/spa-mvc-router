@@ -1,33 +1,22 @@
-# Single Page Application on JS ES6 with router and MVC 
+### Single Page Application on JS ES6 with router and MVC
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+This is a Single Page Application written in JavaScript ES6, using a simple router and the MVC pattern, and styled with Bootstrap CSS.
 
-This application was written on plain JavaScript ES6. We use simple router, MVC pattern, bootstrap css.
+### Each component has three files:
 
-For example component PostShow has 3 files 
-in "/src/components/postShow/"
-- index.js - **Controller**
-- model.js  - **Model**
-- view.js - **View**
+- index.js which acts as the `Controller`
+- model.js which contains the `Model`
+- view.js which holds the `View`
 
-### [View the demo](https://meugenom.github.io/spa-mvc-router/)
-### Using node v16.14.2 (npm v8.5.0)
+For example, the component PostShow has these files located in the `/src/components/postShow/` folder.
 
-### API
+You can view a demo of the application at [Demo](https://meugenom.github.io/spa-mvc-router/)
 
-For API Calls was used RESTFul interface from [mockapi.io](https://www.mockapi.io/docs) 
+### To run this application:
 
-## How run this application
+1. Clone the repository with the command `git clone https://github.com/meugenom/spa-mvc-router.git`
+2. Change to the directory with `cd spa-mvc-router`.
+3. Build the pages with `npm run build`.
+4. To use the application in dev mode, run `npm run start` in the terminal.
 
-1. Install:
-`git clone https://github.com/eugenemdev/spa-mvc-router.git`
-2. Change dir
-`cd spa-mvc-router`
-3. Build pages
-`npm run build`
-4. For using please write in terminal command:
-`npm run start` 
-
-## Author
-
-- [Eugen](https://meugenom.com)
+The author of this application is meugenom and their website is [https://meugenom.com](https://meugenom.com). This application is licensed under the MIT license.

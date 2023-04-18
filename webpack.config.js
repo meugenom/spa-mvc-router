@@ -1,11 +1,12 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+// webpack.config.js
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: ['babel-polyfill', './src/app.js'],
-  	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js'
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -13,23 +14,18 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
-      }
-    ]
-  },
-  resolve: {
-    extensions: ['.js', '.jsx', '.scss']
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack 4 Starter',
       template: './src/index.html',
-      inject: true,
-      minify: {
-		removeComments: true,
-		collapseWhitespace: false
-      }
-    })
-  ]
-}
+      filename: 'index.html',
+    }),
+  ],
+};
