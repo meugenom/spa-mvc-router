@@ -1,6 +1,17 @@
 class Utils {
+
+  url = null;
+  r = [];
+  request = {
+     resource: null,
+     id: null, 
+     verb: null
+    };
+
+  
   constructor () {
-    this.url = location.hash.slice(1).toLowerCase() || '/'
+
+    this.url = location.pathname.toLowerCase() || '/'
     this.r = this.url.split('/')
     this.request = {
       resource: null,
@@ -10,9 +21,11 @@ class Utils {
   }
 
   parseRequestURL () {
-    this.request.resource = this.r[1]
-    this.request.id = this.r[2]
-    this.request.verb = this.r[3]
+
+    this.request.resource = this.r[1] || null;
+    this.request.id = this.r[2] || null;
+    this.request.verb = this.r[3] || null;
+    
     return this.request
   }
 }

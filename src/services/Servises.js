@@ -3,6 +3,7 @@ class Service {
     this.options = { method: 'GET', headers: { 'Content-Type': 'application/json' } }
   }
 
+
   async getUsers () {
     try {
       const response = await fetch('https://62446a733da3ac772b0f8517.mockapi.io/api/v1/users', this.options)
@@ -11,7 +12,7 @@ class Service {
     } catch (err) {
       console.log('Error getting list of users', err)
     }
-  }
+  } 
 
   async getUser (id) {
     const options = {

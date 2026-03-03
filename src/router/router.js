@@ -33,7 +33,12 @@ class Router {
     await new Bottombar().afterRender()
 
     const request = new Utils().parseRequestURL()
-    const parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '')
+    
+       const parsedURL =  (request.resource ? '/' + request.resource : '/') + 
+                          (request.id ? '/:id' : '') + 
+                          (request.verb ? '/' + request.verb : '');
+    
+    
     const page = this.routes[parsedURL] ? this.routes[parsedURL] : new Error404()
 
     this.content.innerHTML = await page.render()

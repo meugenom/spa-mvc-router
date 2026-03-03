@@ -2,8 +2,21 @@
 'use strict'
 import Router from './router/router.js'
 
-// Listen on hash change:
-window.addEventListener('hashchange', function () {
+// Intercept link clicks for SPA navigation:
+window.addEventListener('click', function (e) {
+  const link = e.target.closest('a[href]')
+  if (link) {
+    const href = link.getAttribute('href')
+    if (href.startsWith('/')) {
+      e.preventDefault()
+      window.history.pushState({}, '', href)
+      new Router()
+    }
+  }
+})
+
+// Listen on back/forward navigation:
+window.addEventListener('popstate', function () {
   new Router()
 })
 
