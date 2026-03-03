@@ -2,7 +2,7 @@
 'use strict'
 import Router from './router/router.js'
 
-// Intercept link clicks for SPA navigation:
+// Intercept link clicks for SPA navigation for clearing the URL and preventing page reloads:
 window.addEventListener('click', function (e) {
   const link = e.target.closest('a[href]')
   if (link) {

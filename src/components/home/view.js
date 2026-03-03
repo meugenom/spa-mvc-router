@@ -13,7 +13,7 @@ class View {
                 <h1> Home </h1>
                 <ul>
                     ${users.map(user =>
-                        /* html */`<li><a href="user/${user.id}">${user.name}</a></li>`
+                        /* html */`<li><a href="/user/${user.id}">${user.name}</a></li>`
                         ).join('\n ')
                     }
                 </ul>
