@@ -20,7 +20,7 @@
   "author": "meugenom",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.21.4",
+    "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.21.4",
     "babel-loader": "^9.1.2",
     "html-webpack-plugin": "^5.5.1",
