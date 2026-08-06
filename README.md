@@ -27,9 +27,31 @@ For example, the component `Home` has these files located in the `/src/component
 4. To use the application in dev mode, run `yarn start` in the terminal.
 
 ### How to build
+
 ```bash
     yarn build && cd dist
 ```
+
+### Testing
+
+> Unit testing is powered by Jasmine and jsdom for Node.js DOM environment simulation.
+
+***What is covered:***
+
+- Router & URL Parsing: Dynamic route mapping (/, /user/:id), fallback to 404 page, and URL parsing utilities.
+- Service Layer: API data fetching (getUsers, getUser) and HTTP error handling.
+- Views & Security: Safe HTML rendering and XSS protection escaping.
+- Models: Route parameter extraction and data binding.
+
+### Run Unit Tests
+
+```bash
+    yarn test
+```
+
+### License
+
+This project is open-source and available under the [MIT License](LICENSE).
 
 AUTOR: [https://meugenom.com](https://meugenom.com).
 
