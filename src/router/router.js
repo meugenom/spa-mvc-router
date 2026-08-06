@@ -1,49 +1,66 @@
-import Home from './../components/home/index.js'
-import User from './../components/user/index.js'
-import Bottombar from './../components/bottombar/index.js'
-import Navbar from './../components/navbar/index.js'
-import About from './../components/about/index.js'
-import Error404 from './../components/error404/index.js'
-import Register from './../components/register/index.js'
+import Home from "./../components/home/index.js";
+import User from "./../components/user/index.js";
+import Bottombar from "./../components/bottombar/index.js";
+import Navbar from "./../components/navbar/index.js";
+import About from "./../components/about/index.js";
+import Error404 from "./../components/error404/index.js";
+import Register from "./../components/register/index.js";
 
-import Utils from './../services/Utils.js'
+import Utils from "./../services/Utils.js";
 
 class Router {
-  constructor () {
+  constructor() {
     this.routes = {
-      '/': new Home(),
-      '/about': new About(),
-      '/user/:id': new User(),
-      '/register': new Register()
-    }
+      "/": new Home(),
+      "/about": new About(),
+      "/user/:id": new User(),
+      "/register": new Register(),
+    };
 
-    // start
-    this.header = null || document.getElementById('header')
-    this.content = null || document.getElementById('page')
-    this.footer = null || document.getElementById('footer')
-    this.init()
+    this.header = document.getElementById("header");
+    this.content = document.getElementById("page");
+    this.footer = document.getElementById("footer");
+    this.layoutInitialized = false;
   }
 
-  async init () {
-    // Render the Header and footer of the page
-    this.header.innerHTML = await new Navbar().render()
-    await new Navbar().afterRender()
+  async initLayout() {
+    if (this.layoutInitialized) return;
 
-    this.footer.innerHTML = await new Bottombar().render()
-    await new Bottombar().afterRender()
+    if (this.header) {
+      const navbar = new Navbar();
+      this.header.innerHTML = await navbar.render();
+      await navbar.afterRender();
+    }
 
-    const request = new Utils().parseRequestURL()
-    
-       const parsedURL =  (request.resource ? '/' + request.resource : '/') + 
-                          (request.id ? '/:id' : '') + 
-                          (request.verb ? '/' + request.verb : '');
-    
-    
-    const page = this.routes[parsedURL] ? this.routes[parsedURL] : new Error404()
+    if (this.footer) {
+      const bottombar = new Bottombar();
+      this.footer.innerHTML = await bottombar.render();
+      await bottombar.afterRender();
+    }
 
-    this.content.innerHTML = await page.render()
-    await page.afterRender()
+    this.layoutInitialized = true;
+  }
+
+  async renderPage() {
+    if (!this.layoutInitialized) {
+      await this.initLayout();
+    }
+
+    const request = new Utils().parseRequestURL();
+    const parsedURL =
+      (request.resource ? "/" + request.resource : "/") +
+      (request.id ? "/:id" : "") +
+      (request.verb ? "/" + request.verb : "");
+
+    const page = this.routes[parsedURL]
+      ? this.routes[parsedURL]
+      : new Error404();
+
+    if (this.content) {
+      this.content.innerHTML = await page.render();
+      await page.afterRender();
+    }
   }
 }
 
-export default Router
+export default Router;
