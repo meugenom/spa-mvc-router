@@ -1,55 +1,27 @@
 'use strict'
 
-/**
- * View for postShow controller
- */
-
 class View {
-  constructor () {
-    this.document = document
-    this.section = this.createElement('section', 'section')
-    this.name = this.createElement('h1', 'user_name')
-    this.section.append(this.name)
-    this.area = this.createElement('p', 'user_area')
-    this.section.append(this.area)
-    this.description = this.createElement('p', 'user_description')
-    this.section.append(this.description)
-
-    this.image = this.createElement('img', 'user_image')
-    this.image.className = 'img-fluid  img-thumbnail'
-    this.section.append(this.image)
-
-    this.user = {}
-  }
-
-  createElement (tag, attribute) {
-    const element = this.document.createElement(tag)
-    element.setAttribute('id', attribute)
-    return element
-  }
-
-  getElement (selector) {
-    const element = this.section.querySelector('#' + selector)
-    return element
-  }
-
-  setElement (selector, text) {
-    const element = this.getElement(selector)
-    element.innerHTML = text
-  }
-
-  setImage (selector, url) {
-    const element = this.getElement(selector)
-    element.src = url
+  escapeHtml (str) {
+    if (!str) return ''
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;')
   }
 
   appendUser (user) {
-    console.log(user)
-    this.setElement('user_name', user.name)
-    this.setElement('user_description', user.description)
-    this.setElement('user_area', user.area)
-    this.setImage('user_image', user.image)
-    return this.section.outerHTML
+    if (!user) return '<section class="section"><p>User not found</p></section>'
+
+    return /* html */`
+      <section class="section">
+        <h1 id="user_name">${this.escapeHtml(user.name)}</h1>
+        <p id="user_area">${this.escapeHtml(user.area)}</p>
+        <p id="user_description">${this.escapeHtml(user.description)}</p>
+        <img id="user_image" class="img-fluid img-thumbnail" src="${this.escapeHtml(user.image)}" alt="${this.escapeHtml(user.name)}" />
+      </section>
+    `
   }
 }
 
