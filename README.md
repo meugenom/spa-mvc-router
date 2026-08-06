@@ -65,4 +65,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 AUTOR: [https://meugenom.com](https://meugenom.com).
 
-![screenshot](./assets/screenshot_v.1.3.0.png)
+![screenshot](./assets/screenshot_v.1.4.0.png)
