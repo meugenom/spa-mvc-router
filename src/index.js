@@ -1,8 +1,9 @@
-/* eslint-disable no-new */
 'use strict'
 import Router from './router/router.js'
 
-// Intercept link clicks for SPA navigation for clearing the URL and preventing page reloads:
+const router = new Router()
+
+// Intercept link clicks for SPA navigation:
 window.addEventListener('click', function (e) {
   const link = e.target.closest('a[href]')
   if (link) {
@@ -10,17 +11,17 @@ window.addEventListener('click', function (e) {
     if (href.startsWith('/')) {
       e.preventDefault()
       window.history.pushState({}, '', href)
-      new Router()
+      router.renderPage()
     }
   }
 })
 
 // Listen on back/forward navigation:
 window.addEventListener('popstate', function () {
-  new Router()
+  router.renderPage()
 })
 
 // Listen on page load:
 window.addEventListener('load', function () {
-  new Router()
+  router.renderPage()
 })
