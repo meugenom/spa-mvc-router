@@ -1,4 +1,4 @@
-### Single Page Application on JS ES6 with router and MVC
+### Single Page Application on JS ES6 with router and MVC v.1.4.0
 
 [![Website Status](https://img.shields.io/badge/DEMO_Site-Live-brightgreen?style=for-the-badge&logo=google-chrome)](https://spa-mvc-router.meugenom.com)
 </br>
@@ -7,7 +7,7 @@
 </br>
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)
 
-[DEMO WEB](https://spa-mvc-router.meugenom.com/)
+[DEMO](https://spa-mvc-router.meugenom.com/)
 
 This is a Single Page Application written in JavaScript ES6, using a simple router and the MVC pattern, and styled with Bootstrap CSS.
 
@@ -19,7 +19,7 @@ This is a Single Page Application written in JavaScript ES6, using a simple rout
 
 For example, the component `Home` has these files located in the `/src/components/home/` folder.
 
-### How to run 
+### How to run
 
 1. Clone the repository with the command `git clone https://github.com/meugenom/spa-mvc-router.git`
 2. Change to the directory with `cd spa-mvc-router`.
