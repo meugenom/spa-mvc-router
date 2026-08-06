@@ -35,7 +35,7 @@ class View {
 
   setElement (selector, text) {
     const element = this.getElement(selector)
-    element.innerHTML = text
+    if (element) element.textContent = text
   }
 
   setImage (selector, url) {
