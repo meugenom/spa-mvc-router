@@ -7,7 +7,6 @@
 </br>
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)
 
-
 [DEMO](https://meugenom.github.io/spa-mvc-router/)
 
 This is a Single Page Application written in JavaScript ES6, using a simple router and the MVC pattern, and styled with Bootstrap CSS.
@@ -32,6 +31,6 @@ For example, the component `Home` has these files located in the `/src/component
     yarn build && cd dist
 ```
 
-AUTOR: [https://meugenom.com](https://meugenom.com). 
+AUTOR: [https://meugenom.com](https://meugenom.com).
 
 ![screenshot](./assets/screenshot.png)
