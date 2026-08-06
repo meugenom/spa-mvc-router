@@ -2,7 +2,7 @@
 
 [![Website Status](https://img.shields.io/badge/My_Site-Live-brightgreen?style=for-the-badge&logo=google-chrome)](https://meugenom.github.io/spa-mvc-router/)
 </br>
-![ES6](https://img.shields.io/badge/typescript-%23007acc.svg?style=for-the-badge&logo=javascript&logoColor=white)
+![ES6](https://img.shields.io/badge/javascript-%23007acc.svg?style=for-the-badge&logo=javascript&logoColor=white)
 ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 </br>
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)
