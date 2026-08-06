@@ -1,5 +1,5 @@
 import Utils from '../../services/Utils.js'
-import Service from '../../services/Servises.js'
+import Service from '../../services/Services.js'
 
 class Model {
   constructor () {

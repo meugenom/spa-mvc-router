@@ -1,5 +1,5 @@
 'use strict'
-import Service from '../../services/Servises.js'
+import Service from '../../services/Services.js'
 
 /**
  * Model for component Home
